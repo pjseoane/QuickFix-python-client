@@ -1,7 +1,7 @@
 import sys
 import os 
 import time
-import thread
+#import thread
 import quickfix as fix
 import quickfix44 as fix44
 from datetime import datetime
@@ -46,7 +46,7 @@ class SECURITY():
         self.YTM=0 #
         self.YTW=0 #
     def __str__(self):
-	return '''
+	return "
 	Symbol is %s,
 	MDEntryID is %s,
 	MDUpdateAction is %s,
@@ -58,9 +58,9 @@ class SECURITY():
 	MinBr is %f,
 	YTM is %f,
 	YTW is %f
-	''' % (self.Symbol, self.MDEntryID, self.MDUpdateAction, self.MDEntryType, 
+	 % (self.Symbol, self.MDEntryID, self.MDUpdateAction, self.MDEntryType,
 	       self.MDEntryPx, self.MDEntrySize, self.MinQty, self.MinInc, self.MinBR,
-	       self.YTM, self.YTW)
+	       self.YTM, self.YTW)"
 
 class Application (fix.Application):
     global securities 
